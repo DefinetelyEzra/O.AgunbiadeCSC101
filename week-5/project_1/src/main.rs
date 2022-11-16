@@ -20,15 +20,19 @@ fn main() {
     io::stdin().read_line(&mut input3).expect("Invalid value");
     let valuec:f32 = input3.trim().parse().expect("Invalid value");
 
-    let determinant:f32 = (valueb + (valueb * valueb) - 4.0 * valuea * valuec)/ 2.0 * valuea;
+    let result:f32 = (valueb * valueb) - (4.00 * valuea * valuec);
+
+    let determinant:f32 = result.sqrt();
+
+    println!("The determinant is = {}",determinant);
 
     if determinant > 0.00 {
-        println!("There are two distinct roots",);
+        println!("Therefore are two distinct roots",);
     }
     else if determinant == 0.00 {
-        println!("There is one real root",);
+        println!("Therefore is one real root",);
     }
     else if determinant < 0.00 {
-        println!("There are no real roots");
+        println!("Therefore are no real roots");
     }
 }

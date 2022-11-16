@@ -26,7 +26,7 @@ fn main() {
 
     if response == n {
         println!("Sorry, and thank you for coming...");
-        process::exit(0x0100);
+        process::exit(0);
     }
     else if response == y {
         println!("What would you like to order...(maximum of four orders per session) (Enter the price of your order)
