@@ -9,7 +9,7 @@ fn main() {
     let mut input3 = String::new();
     let mut input4 = String::new();
     let mut input5 = String::new();
-    let mut input6 = String::new();
+    let mut input6 = String::new();  
 
     println!("Welcome to Lekki Diner, you would like to order from us?(true or false) ");
     io::stdin().read_line(&mut input1).expect("Not a valid key");
@@ -48,7 +48,7 @@ fn main() {
     io::stdin().read_line(&mut input5).expect("invalid keys");
     let order4:f32 = input5.trim().parse().expect("invalid order");
 
-    println!("Enter the letter keys of your order to confirm... (ed. f, e, a): ");
+    println!("Enter the letter keys of your order to confirm... (eg. f, e, a): ");
     io::stdin().read_line(&mut input6).expect("Invalid keys");
 
     let total:f32 = order1 + order2 + order3 + order4;
