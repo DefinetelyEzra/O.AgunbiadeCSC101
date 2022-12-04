@@ -1,5 +1,5 @@
-
 use std::io;
+use std::process;
 
 fn area_of_trapezium(h: f32, c: f32, b1: f32, b2: f32){
 
@@ -116,5 +116,18 @@ fn main() {
         let pi:f32 = 22.0 / 7.0;
         
         volume_of_cylinder(pi, radius, height)
+    }
+
+    let mut cont = String::new();
+    println!("Would you like to perform any more calculations? ");
+    io::stdin().read_line(&mut cont).expect("Not an expected input");
+    let more:&str = cont.trim();
+
+    if more == "y"{
+        while more == "y"
+        { main() }
+    }
+    else if more == "n" {
+        process::exit(0); 
     }
 }
